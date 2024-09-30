@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürünler - Yazılım Şirketi</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- Özel CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar Başlangıç -->
+    <nav
+      style="background-color: rgb(222, 220, 220) !important"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Yazılım Şirketi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Ürünler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Bitiş -->
+
+    <!-- Ürünler Bölümü Başlangıç -->
+    <div class="container my-5">
+      <h2
+        style="
+          font-size: 28px;
+          line-height: 1.1428571429;
+          font-weight: 500;
+          letter-spacing: 0.007em;
+          font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica,
+            Arial, sans-serif;
+        "
+        class="text-center mb-4"
+      >
+        Ürünlerimiz
+      </h2>
+      <div class="row" id="product-list">
+        <!-- Ürün kartları JavaScript ile eklenecek -->
+      </div>
+    </div>
+    <!-- Ürünler Bölümü Bitiş -->
+
+    <!-- Footer Başlangıç -->
+    <footer class="bg-dark text-white mt-5">
+      <div class="container py-4 text-center">
+        <p>&copy; 2023 Yazılım Şirketi. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+    <!-- Footer Bitiş -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ürünler JS -->
+    <script>
+      fetch("../Products/products.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const productList = document.getElementById("product-list");
+          data.forEach((product) => {
+            const col = document.createElement("div");
+            col.className = "col-md-4";
+
+            const card = document.createElement("div");
+            card.className = "card mb-4";
+
+            const img = document.createElement("img");
+            img.src = product.image;
+            img.className = "card-img-top";
+            img.alt = product.name;
+
+            const cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+
+            const h5 = document.createElement("h5");
+            h5.className = "card-title";
+            h5.textContent = product.name;
+
+            const p = document.createElement("p");
+            p.className = "card-text";
+            p.textContent = product.description;
+
+            const contactDiv = document.createElement("div");
+            contactDiv.className = "d-flex justify-content-between";
+
+            // Telefon ikonu
+            const phoneLink = document.createElement("a");
+            phoneLink.href = "#";
+            phoneLink.className = "text-primary";
+            phoneLink.innerHTML = '<i class="bi bi-telephone"></i>';
+            phoneLink.setAttribute("data-bs-toggle", "tooltip");
+            phoneLink.setAttribute("title", "+90 555 555 55 55");
+
+            // Mail ikonu
+            const mailLink = document.createElement("a");
+            mailLink.href = "mailto:info@firma.com";
+            mailLink.className = "text-danger";
+            mailLink.innerHTML = '<i class="bi bi-envelope"></i>';
+
+            contactDiv.appendChild(phoneLink);
+            contactDiv.appendChild(mailLink);
+
+            cardBody.appendChild(h5);
+            cardBody.appendChild(p);
+            cardBody.appendChild(contactDiv);
+
+            card.appendChild(img);
+            card.appendChild(cardBody);
+
+            col.appendChild(card);
+            productList.appendChild(col);
+          });
+
+          // Tooltipleri etkinleştirme
+          var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          );
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        });
+    </script>
+  </body>
+</html>

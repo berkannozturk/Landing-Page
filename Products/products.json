@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "CRM Yönetim Sistemi",
+    "description": "Müşteri ilişkilerini etkin bir şekilde yönetin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 2,
+    "name": "E-Ticaret Platformu",
+    "description": "Online satışlarınızı artırın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mobil Uygulama Geliştirme",
+    "description": "İşletmeniz için özel mobil uygulamalar.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Web Sitesi Tasarımı",
+    "description": "Profesyonel ve modern web siteleri.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 5,
+    "name": "ERP Çözümleri",
+    "description": "İş süreçlerinizi entegre edin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Siber Güvenlik Hizmetleri",
+    "description": "Veri güvenliğinizi sağlayın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bulut Bilişim Çözümleri",
+    "description": "Esnek ve ölçeklenebilir bulut hizmetleri.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Veri Analitiği",
+    "description": "Verilerinizden anlamlı içgörüler elde edin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Yapay Zeka Uygulamaları",
+    "description": "İşinizi akıllı hale getirin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 10,
+    "name": "IoT Çözümleri",
+    "description": "Cihazlarınızı birbirine bağlayın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Dijital Pazarlama",
+    "description": "Online varlığınızı güçlendirin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 12,
+    "name": "SEO Optimizasyonu",
+    "description": "Arama motorlarında üst sıralara çıkın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 13,
+    "name": "UI/UX Tasarımı",
+    "description": "Kullanıcı dostu arayüzler tasarlayın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Veri Tabanı Yönetimi",
+    "description": "Verilerinizi etkin bir şekilde yönetin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 15,
+    "name": "API Entegrasyonları",
+    "description": "Sistemlerinizi birbirine bağlayın.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Chatbot Geliştirme",
+    "description": "Müşteri hizmetlerinizi otomatikleştirin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Oyun Geliştirme",
+    "description": "Eğlenceli ve etkileşimli oyunlar oluşturun.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Eğitim Yazılımları",
+    "description": "Eğitim süreçlerini dijitalleştirin.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Sanal Gerçeklik (VR)",
+    "description": "Sanal deneyimler oluşturun.",
+    "image": "../images/software.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Artırılmış Gerçeklik (AR)",
+    "description": "Gerçek dünya ile dijitali birleştirin.",
+    "image": "../images/software.jpg"
+  }
+]
